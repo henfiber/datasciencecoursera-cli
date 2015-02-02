@@ -24,7 +24,7 @@ rankall() {
 
 # MAIN
 
-	# Parsing Num and outcome
+	# Parsing num and outcome
 	case $num in
 		best)  num=1 ;;
 		worst) num=1; order='-k2.1rg -k1.1d -k3.1d' ;;  # sort by rate descending
@@ -35,6 +35,7 @@ rankall() {
 		"heart failure")	outcome=17 ;;
 		"pneumonia")  		outcome=23 ;;
 	esac
+
 
 
 	# Having set the parameters, Run the rankall function
