@@ -7,8 +7,8 @@ INPUT_FILE=outcome-of-care-measures.csv  # this could be given as an argument as
 order='-k1.1d -k2.1g -k3.1d'  # default arguments to sort command - to be changed when num="worst"
 
 # CLI Arguments
-outcome=${1:-11}  # Default value : 11 (Heart attack)
-num=${2:-1}		  # Default value : Get the first (best) hospital
+outcome=${1:-11}	# Default value : 11 (Heart attack)
+num=${2:-1}			# Default value : Get the first (best) hospital
 
 
 # Rankall function  (R: rankall(outcome, num = "best") )
