@@ -25,15 +25,17 @@ rankall() {
 # MAIN
 
 	# Parsing num and outcome
-	case $num in
+	case "$num" in
 		best)  num=1 ;;
 		worst) num=1; order='-k2.1rg -k1.1d -k3.1d' ;;  # sort by rate descending
 	esac
 
-	case $outcome in
+	case "$outcome" in
 		"heart attack") 	outcome=11 ;;
 		"heart failure")	outcome=17 ;;
 		"pneumonia")  		outcome=23 ;;
+		11|17|23)			: ;;
+		*)					echo "invalid outcome" >&2; exit 2 ;;
 	esac
 
 
